@@ -14,40 +14,42 @@ body{
     background-color: #313552;
 }
 .div {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     background-color:#B8405E;
     border-radius: 50%;
 
-    position: relative;
+    position: absolute;
     top:0;
-    bottom: 0;
+    bottom: 20%;
     left: 0;
     right: 0;
 
     margin: auto;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.295);
-}   
+}
 
 
 .span1 {
-    background-color: black;
-    height: 10px;
-    width: 50px;
-    float: left;
-    position: relative;
-    top: 125px;
-    left: 35px;
+background-color: rgb(230, 227, 227);
+height: 2px;
+width: 60px;
+float: left;
+position: relative;
+top: 250px;
+left: 80px;
+
+
 }
 
 .span2 {
-    background-color: black;
-    height: 10px;
-    width: 50px;
-    float: right;
-    position: relative;
-    top: 125px;
-    right: 35px;
+background-color:rgb(230, 227, 227);
+height: 2px;
+width: 60px;
+float: left;
+position: relative;
+top: 250px;
+right: -100px;
 }
 .textbox1 {
     border: none;
