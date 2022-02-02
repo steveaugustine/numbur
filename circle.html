@@ -3,15 +3,39 @@
     <head>
         <style>
             .div {
-                height: 50px;
-                width: 50px;
+                height: 200px;
+                width: 200px;
                 border-radius: 50%;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.295);
+            }
+
+            .span1 {
                 background-color: black;
-                position: absolute;
+                height: 10px;
+                width: 50px;
+                float: left;
+                position: relative;
+                top: 100px;
+                left: 35px;
+            }
+
+            .span2 {
+                background-color: black;
+                height: 10px;
+                width: 50px;
+                float: right;
+                position: relative;
+                top: 100px;
+                right: 35px;
             }
         </style>
     </head>
     <body>
-        <div class="div"></div>
+        <center><div class="div">
+            <span class="span1"></span>
+            <span class="span2"></span>
+        </div></center>
+        
     </body>
 </html>
