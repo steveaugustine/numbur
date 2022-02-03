@@ -12,7 +12,15 @@ input.addEventListener("keydown", function (event) {
 
         console.log("input is " + parseInt(input.value))
 
-        if (numbur % parseInt(input.value) == 0) {
+        if (numbur == parseInt(input.value)) {
+            document.getElementById("div").style.backgroundColor = "green";
+            input.style.backgroundColor = "green"
+            input.disabled = "true";
+
+            console.log("Correct");
+        }
+
+        else if (numbur % parseInt(input.value) == 0) {
             // change color of tx box
             document.getElementById(`t${count}`).style.backgroundColor = "green";
             
@@ -22,7 +30,7 @@ input.addEventListener("keydown", function (event) {
             used.innerHTML = input.value;
             document.getElementById(`t${count}`).appendChild(used);
             console.log("factor");
-            input.value = ""
+            input.value = "";
         }
         else {
             // change color of tx box
@@ -34,7 +42,7 @@ input.addEventListener("keydown", function (event) {
             used.innerHTML = input.value;
             document.getElementById(`t${count}`).appendChild(used);
             console.log("factor");
-            input.value = ""
+            input.value = "";
         }
     }
 });
