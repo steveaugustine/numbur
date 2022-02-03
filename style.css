@@ -279,3 +279,6 @@ right: -160px;
 .input:focus {
     outline: none;
 }
+.used{
+color:#EEE6CE;
+}
