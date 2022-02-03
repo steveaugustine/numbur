@@ -54,7 +54,7 @@ body{
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.295);
 }
 .div1:hover {
-    transform: scale(1.1); 
+    transform: scale(1.09); 
   }
 
 
@@ -273,6 +273,7 @@ right: -160px;
     left: 0px;
     top: 110px;
     letter-spacing: 52px;
+    caret-color: transparent;
 }
 
 .input:focus {
