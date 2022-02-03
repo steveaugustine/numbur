@@ -16,7 +16,7 @@ input.addEventListener("keydown", function (event) {
             document.getElementById(`t${count}`).style.backgroundColor = "green";
             
             let used = document.createElement("p");
-            used.className = `used${count}`;
+            used.className = `used`;
             used.innerHTML = input.value;
             document.getElementById(`t${count}`).appendChild(used);
             console.log("factor");
