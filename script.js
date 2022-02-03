@@ -20,9 +20,19 @@ input.addEventListener("keydown", function (event) {
             used.innerHTML = input.value;
             document.getElementById(`t${count}`).appendChild(used);
             console.log("factor");
+            input.value = ""
         }
         else {
-            console.log("no factor");
+            // change color of tx box
+            document.getElementById(`t${count}`).style.backgroundColor = "red";
+            
+            // create a p tag and change value 
+            let used = document.createElement("p");
+            used.className = "used";
+            used.innerHTML = input.value;
+            document.getElementById(`t${count}`).appendChild(used);
+            console.log("factor");
+            input.value = ""
         }
     }
 });
