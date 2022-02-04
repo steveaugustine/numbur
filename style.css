@@ -231,7 +231,7 @@ body {
 
 .input {
     background-color: #B8405E;
-    border: none;
+    border: none; 
     font-size: 72px;
     width: 185px;
     position: absolute;
