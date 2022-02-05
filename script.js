@@ -12,13 +12,13 @@ input.addEventListener("keydown", function (event) {
         count += 1;
     
         if (numbur == parseInt(input.value)) {
-            document.getElementById("div").style.backgroundColor = "green";
-            input.style.backgroundColor = "green"
+            document.getElementById("div").style.backgroundColor = "#2EB086";
+            input.style.backgroundColor = "#2EB086"
             input.disabled = "true";
         }
         else if (numbur % parseInt(input.value) == 0) {
             // change color of tx box
-            document.getElementById(`t${count}`).style.backgroundColor = "green";
+            document.getElementById(`t${count}`).style.backgroundColor = "#2EB086";
                 
             // create a p tag and change value to input value
             let used = document.createElement("p");
@@ -29,7 +29,7 @@ input.addEventListener("keydown", function (event) {
         }
         else {
             // change color of tx box
-            document.getElementById(`t${count}`).style.backgroundColor = "red";
+            document.getElementById(`t${count}`).style.backgroundColor = "#B33030";
                 
             // create a p tag and change value to input value
             let used = document.createElement("p");
