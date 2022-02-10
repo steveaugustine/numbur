@@ -2,6 +2,32 @@ setTimeout(function() {
     var input = document.getElementById("input");
     var count = 0; // keep track of chance
 
+
+var input = document.getElementById("input");
+var count = 0; // keep track of chances
+
+let numbur = Math.floor(Math.random() * 90) + 10; // random number
+console.log("random number: " + numbur)
+
+while (isaPrime(numbur)) {
+    numbur =  Math.floor(Math.random() * 90) + 10;
+    console.log("random number: " + numbur)
+} 
+
+input.addEventListener("keydown", function (event) {
+    // function on enter key press and input not empty
+    if ((event.code === "Enter" || event.keyCode == 13) && !isNaN(input.value)) {
+        count += 1;
+    
+        if (numbur == parseInt(input.value)) {
+            document.getElementById("div").style.backgroundColor = "green";
+            input.style.backgroundColor = "green"
+            input.disabled = "true";
+        }
+        else if (numbur % parseInt(input.value) == 0) {
+            // change color of tx box
+            document.getElementById(`t${count}`).style.backgroundColor = "green";
+=======
     const numbur = Math.floor(Math.random() * 90) + 10; // random number
     console.log("random number: " + numbur)
 
@@ -36,7 +62,7 @@ setTimeout(function() {
             else {
                 // change color of tx box
                 document.getElementById(`t${count}`).style.backgroundColor = "#B33030";
-                
+               
                 // create a p tag and change value to input value
                 let used = document.createElement("p");
                 used.className = "used";
@@ -86,6 +112,21 @@ setTimeout(function() {
             }
             
         }
+
+    }
+});
+
+function isaPrime(number) {
+    for (let i = 2; i <= number / 2; i++) {
+        if (number % i == 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
     
     });
 }, 2000);
+
