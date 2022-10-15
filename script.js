@@ -27,7 +27,6 @@ input.addEventListener("keydown", function (event) {
         else if (numbur % parseInt(input.value) == 0) {
             // change color of tx box
             document.getElementById(`t${count}`).style.backgroundColor = "green";
-=======
     const numbur = Math.floor(Math.random() * 90) + 10; // random number
     console.log("random number: " + numbur)
 
