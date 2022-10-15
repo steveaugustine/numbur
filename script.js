@@ -2,35 +2,24 @@ setTimeout(function() {
     var input = document.getElementById("input");
     var count = 0; // keep track of chance
 
-
-var input = document.getElementById("input");
-var count = 0; // keep track of chances
-
-let numbur = Math.floor(Math.random() * 90) + 10; // random number
-console.log("random number: " + numbur)
-
-while (isaPrime(numbur)) {
-    numbur =  Math.floor(Math.random() * 90) + 10;
-    console.log("random number: " + numbur)
-} 
-
-input.addEventListener("keydown", function (event) {
-    // function on enter key press and input not empty
-    if ((event.code === "Enter" || event.keyCode == 13) && !isNaN(input.value)) {
-        count += 1;
     
-        if (numbur == parseInt(input.value)) {
-            document.getElementById("div").style.backgroundColor = "green";
-            input.style.backgroundColor = "green"
-            input.disabled = "true";
+    
+    
+    function isPrime(numbur) { // returns boolean
+        if (numbur <= 1) return false; // negatives
+        if (numbur % 2 == 0 && numbur > 2) return false; // even numbers
+        const s = Math.sqrt(numbur); // store the square to loop faster
+        for(let i = 3; i <= s; i += 2) { // start from 3, stop at the square, increment in twos
+            if(numbur % i === 0) return false; // modulo shows a divisor was found
         }
-        else if (numbur % parseInt(input.value) == 0) {
-            // change color of tx box
-            document.getElementById(`t${count}`).style.backgroundColor = "green";
-    const numbur = Math.floor(Math.random() * 90) + 10; // random number
-    console.log("random number: " + numbur)
-
-
+        return true;
+      }
+    let numbur = Math.floor(Math.random() * 90) + 10; // random number
+    console.log("random number: " + numbur);  
+    if(isPrime(numbur)===true){
+        numbur=numbur+1;
+    }
+    console.log("New numbur is:"+numbur);
     input.addEventListener("keydown", function (event) {
         // function on enter key press and input not empty
         if (event.code === "Enter" && input.value.trim()) {
@@ -61,7 +50,7 @@ input.addEventListener("keydown", function (event) {
             else {
                 // change color of tx box
                 document.getElementById(`t${count}`).style.backgroundColor = "#B33030";
-               
+                
                 // create a p tag and change value to input value
                 let used = document.createElement("p");
                 used.className = "used";
@@ -70,6 +59,8 @@ input.addEventListener("keydown", function (event) {
                 console.log("factor");
                 input.value = "";
             }
+           
+           
         }
         else if(event.keyCode==13){
             alert('enter');
@@ -111,13 +102,6 @@ input.addEventListener("keydown", function (event) {
             }
             
         }
-
-    }
-});
-
-
-
     
     });
 }, 2000);
-
