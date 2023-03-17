@@ -47,7 +47,7 @@ setTimeout(function() {
                 console.log("factor");
                 input.value = "";
             }
-            else if(count==8){
+            else if(count==9){
             document.getElementbyId("input").value=count.toString();
             
             }
