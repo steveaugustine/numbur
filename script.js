@@ -48,7 +48,7 @@ setTimeout(function() {
                 input.value = "";
             }
             else if(count==9){
-            document.getElementbyId("input").value=count.toString();
+            document.getElementbyId("input").innerHTML=count.toString();
             
             }
             else {
