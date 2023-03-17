@@ -4,6 +4,9 @@
     top: 2.5%;
     transition: transform .2s; /* Animation */
 }
+body{
+    transform:scale(80%)
+}
 
 .help:hover {
     transform: scale(1.5); 
