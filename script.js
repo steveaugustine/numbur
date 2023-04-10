@@ -1,7 +1,7 @@
 setTimeout(function() {
     var input = document.getElementById("input");
     var count = 0; // keep track of chance
-
+    console.log(count)
     
     
     
@@ -24,7 +24,7 @@ setTimeout(function() {
         // function on enter key press and input not empty
         if (event.code === "Enter" && input.value.trim()) {
             count += 1;
-    
+            console.log(count)
             console.log("input is " + parseInt(input.value))
     
             if (numbur == parseInt(input.value)) {
@@ -63,6 +63,14 @@ setTimeout(function() {
                 console.log("factor");
                 input.value = "";
             }
+            if(count==8){
+                console.log(count + "gdfgdfg")
+                input.value = numbur.toString();
+                document.getElementById("div").style.backgroundColor = "#FFCE45";
+                input.style.backgroundColor = "#FFCE45"
+                
+                
+                }
            
            
         }
