@@ -1,323 +1,399 @@
-.help{
-    position:absolute;
-    left: 20%;
-    top: 5.5%;
-    transition: transform .2s; /* Animation */
-}
-/* Popup container - can be anything you want */
-.popup {
-    position: absolute;
-    
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  /* The actual popup */
-  .popup .popuptext {
-    visibility: hidden;
-    width: 200px;
-    height: 280px;
-    background-color: rgb(54, 54, 54);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
+/* Reset and base styles */
+* {
+    margin: 0;
     padding: 0;
-    position: absolute;
-    z-index: 1;
-    top:20%;
-    left: 10%;
-    margin-left: -80px;
-  }
-  
-  /* Popup arrow */
-  
-  
-  /* Toggle this class - hide and show the popup */
-  .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-  }
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
-body{
-    transform:scale(80%)
-}
-
-.help:hover {
-    transform: scale(1.5); 
-}
-
-.stats {
-    position: absolute;
-    right: 20%;
-    top: 2.5%;
-    transition: transform .2s; /* Animation */
-}
-
-.stats:hover {
-    transform: scale(1.5); 
-}
-@font-face {
-    font-family: myFirstFont;
-    src: url(font.ttf);
-  }      
-
-h1 {
-    color:#FFCE45;
-    text-align: center;
-    font-weight: bolder;
-    font-family:myFirstFont;
-    font-size: 40px;
-    
-}
-
-
-hr {
-    width: 600px;
-    margin: auto;
-    border-top: 1px solid #FFCE45;
-    
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #191919;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-.div {
-    width: 300px;
-    height: 300px;
-    background-color:#B8405E;
-    border-radius: 50%;
-    transition: transform .2s; /* Animation */
-    position: absolute;
-    top: 0;
-    bottom: 25%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.295);
+/* Game container */
+.game-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.div:hover {
-    transform: scale(1.09); 
-}
-
-/*.span1 {
-    background-color: rgb(230, 227, 227);
-    height: 2px;
-    width: 60px;
-    float: left;
-    position: absolute;
-    top: 250px;
-    left: 75px;
-}
-
-.span2 {
-    background-color:rgb(230, 227, 227);
-    height: 2px;
-    width: 60px;
-    float: left;
-    position: absolute;
-    top: 250px;
-    right: 75px;
-}*/
-
-.textbox1 {
-    background-color: #C2B8A3;
-    border: none;
-    box-shadow: 5px 5px 15px #00000063;
-    width: 35px;
-    height: 35px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 5px;
-    font-size: larger;
-    text-align: center;
-    border-radius: 50%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    position: absolute;
-    left: 30%;
-    top: 65%;
-}
-
-.textbox2 {
-    background-color: #C2B8A3;
-    border: none;
-    box-shadow: 5px 5px 15px #00000063;
-    width: 35px;
-    height: 35px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 5px;
-    font-size: larger;
-    text-align: center;
-    border-radius: 50%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    position: absolute;
-    left: 41%;
-    top: 65%;;
-}
-
-.textbox3 {
-    background-color: #C2B8A3;
-    border: none;
-    box-shadow: 5px 5px 15px #00000063;
-    width: 35px;
-    height: 35px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 5px;
-    font-size: larger;
-    text-align: center;
-    border-radius: 50%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    position: absolute;
-    right: 41%;
-    top: 65%;
-}
-
-.textbox4 {
-    background-color: #C2B8A3;
-    border: none;
-    box-shadow: 5px 5px 15px #00000063;
-    width: 35px;
-    height: 35px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 5px;
-    font-size: larger;
-    text-align: center;
-    border-radius: 50%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    position: absolute;
-    right: 30%;
-    top: 65%;
-}
-
-.textbox5 {
-    background-color: #C2B8A3;
-    border: none;
-    box-shadow: 5px 5px 15px #00000063;
-    width: 35px;
-    height: 35px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 5px;
-    font-size: larger;
-    text-align: center;
-    border-radius: 50%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    position: absolute;
-    left: 30%;
-    top: 80%;
-}
-
-.textbox6 {
-    background-color: #C2B8A3;
-    border: none;
-    box-shadow: 5px 5px 15px #00000063;
-    width: 35px;
-    height: 35px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 5px;
-    font-size: larger;
-    text-align: center;
-    border-radius: 50%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    position: absolute;
-    left: 41%;
-    top: 80%;;
-}
-
-.textbox7 {
-    background-color: #C2B8A3;
-    border: none;
-    box-shadow: 5px 5px 15px #00000063;
-    width: 35px;
-    height: 35px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 5px;
-    font-size: larger;
-    text-align: center;
-    border-radius: 50%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    position: absolute;
-    right: 41%;
-    top: 80%;
-}
-
-.textbox8 {
-    background-color: #C2B8A3;
-    border: none;
-    box-shadow: 5px 5px 15px #00000063;
-    width: 35px;
-    height: 35px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 5px;
-    font-size: larger;
-    text-align: center;
-    border-radius: 50%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    position: absolute;
-    right: 30%;
-    top: 80%;
-}
-
-.input {
-    background-color: #B8405E;
-    border: none; 
-    font-size: 72px;
-    width: 185px;
-    position: absolute;
-    left: 77px;
-    top: 110px;
-    letter-spacing: 35px;
-    caret-color: transparent;
-    align-self: center;
-    text-align:center;
-    color: white;
-    
-    font-size: 600%;
-}
-
-.input:focus {
-    outline: none;
-}
-
-.used{
-    color:#EEE6CE;
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
     position: relative;
-    bottom: 15px;
+}
+
+.game-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    flex: 1;
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+/* Popup styles */
+.popup {
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.help-icon, .stats-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1;
+}
+
+.help-icon:hover, .stats-icon:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Modal overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popuptext {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    color: #fff;
+    text-align: left;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    transform: scale(0.9) translateY(20px);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.modal-overlay.show .popuptext {
+    transform: scale(1) translateY(0);
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #ffd700;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background: rgba(255, 215, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.popuptext h3 {
+    color: #ffd700;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.popuptext ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.popuptext li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.popuptext li::before {
+    content: "•";
+    color: #ffd700;
+    position: absolute;
+    left: 0;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-label {
+    color: #ccc;
+}
+
+.stat-value {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.close-hint {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Game area */
+.game-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+/* Input container */
+.input-container {
+    position: relative;
+}
+
+.input-circle {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 35px rgba(231, 76, 60, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.input-circle::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+}
+
+.input-circle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(231, 76, 60, 0.6);
+}
+
+.input-circle:hover::before {
+    animation: shine 0.6s ease-in-out;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.input-circle.success {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    box-shadow: 0 15px 35px rgba(39, 174, 96, 0.4);
+}
+
+.input-circle.hint {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    box-shadow: 0 15px 35px rgba(243, 156, 18, 0.4);
+}
+
+.number-input {
+    background: transparent;
+    border: none;
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    caret-color: transparent;
+    z-index: 2;
+    position: relative;
+}
+
+.number-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Guesses container */
+.guesses-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.guesses-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.guess-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.guess-box.filled {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.guess-box.correct {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    border-color: #27ae60;
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+}
+
+.guess-box.incorrect {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    border-color: #e74c3c;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+.guess-number {
+    color: white;
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 15px;
+    }
+    
+    .game-title {
+        font-size: 2.5rem;
+    }
+    
+    .input-circle {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .number-input {
+        font-size: 3rem;
+    }
+    
+    .guess-box {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .guesses-row {
+        gap: 15px;
+    }
+    
+
+}
+
+@media (max-width: 480px) {
+    .game-title {
+        font-size: 2rem;
+    }
+    
+    .input-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .number-input {
+        font-size: 2.5rem;
+    }
+    
+    .guess-box {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+    
+    .guesses-row {
+        gap: 10px;
+    }
+    
+
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.game-area > * {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.game-area > *:nth-child(2) {
+    animation-delay: 0.2s;
 }
